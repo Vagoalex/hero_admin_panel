@@ -17,7 +17,57 @@
       "name": "Морской герой",
       "description": "Как аквамен, но не из DC",
       "element": "water"
+    },
+    {
+      "name": "Морбиус",
+      "description": "Пью кровь",
+      "element": "fire",
+      "id": "26051a3a-9b46-4847-b4b3-063ef00464a6"
+    },
+    {
+      "name": "Капитан Америка",
+      "description": "Топлю за штаты",
+      "element": "earth",
+      "id": "f5e0d0d3-169a-425c-a32b-04980fc10723"
+    },
+    {
+      "name": "Тор",
+      "description": "Бью молниями!",
+      "element": "wind",
+      "id": "6b193ab8-de38-4087-9cbb-959b165eec91"
+    },
+    {
+      "name": "Кирилл",
+      "description": "Шучу не смешные шутки",
+      "element": "water",
+      "id": "317edc89-4ae6-4ead-909d-ba16fb0363fb"
     }
   ],
-  "filters": ["all", "fire", "water", "wind", "earth"]
+  "filters": [
+    {
+      "name": "all",
+      "label": "Все",
+      "className": "bg-danger bg-gradient"
+    },
+    {
+      "name": "fire",
+      "label": "Огонь",
+      "className": "bg-primary bg-gradient"
+    },
+    {
+      "name": "water",
+      "label": "Вода",
+      "className": "bg-success bg-gradient"
+    },
+    {
+      "name": "wind",
+      "label": "Ветер",
+      "className": "bg-secondary bg-gradient"
+    },
+    {
+      "name": "earth",
+      "label": "Земля",
+      "className": "bg-warning bg-gradient"
+    }
+  ]
 }
