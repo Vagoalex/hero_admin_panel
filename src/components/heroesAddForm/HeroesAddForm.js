@@ -63,7 +63,10 @@ const HeroesAddForm = () => {
       element: '',
     },
     validate,
-    onSubmit: addNewHero,
+    onSubmit: (values) => {
+      addNewHero(values);
+      formik.resetForm();
+    },
   });
 
   return (
