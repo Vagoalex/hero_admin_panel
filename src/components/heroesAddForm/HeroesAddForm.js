@@ -8,7 +8,7 @@
 // Элементы <option></option> желательно сформировать на базе
 // данных из фильтров
 import { useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import { useHttp } from '../../hooks/http.hook';
 import { v4 as uuidv4 } from 'uuid';
@@ -43,7 +43,6 @@ function validate(values) {
 
 const HeroesAddForm = () => {
   const { request } = useHttp();
-  const { filter, filtersLoadingStatus } = useSelector((state) => state);
 
   const dispatch = useDispatch();
 
@@ -59,27 +58,6 @@ const HeroesAddForm = () => {
     // eslint-disable-next-line
     [request]
   );
-
-  // const renderFilters = (filter, status) => {
-  //   if (status === 'loading') {
-  //     return <option>Загрузка элементов</option>;
-  //   } else if (status === 'error') {
-  //     return <option>Ошибка загрузки</option>;
-  //   }
-
-  //   if (filter && filter.length > 0) {
-  //     return filter.map(({ name, label }) => {
-  //       // eslint-disable-next-line
-  //       if (name === 'all') return;
-
-  //       return (
-  //         <option key={name} value={name}>
-  //           {label}
-  //         </option>
-  //       );
-  //     });
-  //   }
-  // };
 
   const formik = useFormik({
     initialValues: {

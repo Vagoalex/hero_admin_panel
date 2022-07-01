@@ -4,7 +4,7 @@
 // Активный фильтр имеет класс active
 // Изменять json-файл для удобства МОЖНО!
 // Представьте, что вы попросили бэкенд-разработчика об этом
-import { useCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   filtersFetching,
@@ -17,14 +17,6 @@ import { useHttp } from '../../hooks/http.hook';
 import Spinner from '../spinner/Spinner';
 
 import './HeroesFilters.scss';
-
-const buttons = [
-  { id: 'All', label: 'Все', classNames: 'btn btn-outline-dark active' },
-  { id: 'fire', label: 'Огонь', classNames: 'btn btn-danger' },
-  { id: 'water', label: 'Вода', classNames: 'btn btn-primary' },
-  { id: 'wind', label: 'Ветер', classNames: 'btn btn-success' },
-  { id: 'earth', label: 'Земля', classNames: 'btn btn-secondary' },
-];
 
 const HeroesFilters = () => {
   const { filters, filtersLoadingStatus, activeFilter } = useSelector(
