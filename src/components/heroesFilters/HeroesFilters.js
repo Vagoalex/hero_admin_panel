@@ -20,7 +20,7 @@ import './HeroesFilters.scss';
 
 const HeroesFilters = () => {
   const { filters, filtersLoadingStatus, activeFilter } = useSelector(
-    (state) => state
+    (state) => state.filters
   );
   const dispatch = useDispatch();
   const { request } = useHttp();

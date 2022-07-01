@@ -13,22 +13,10 @@
       "element": "wind"
     },
     {
-      "id": 3,
-      "name": "Морской герой",
-      "description": "Как аквамен, но не из DC",
-      "element": "water"
-    },
-    {
       "name": "Alex",
-      "description": "Стрелять",
+      "description": "Взрывать",
       "element": "fire",
-      "id": "4ee44012-cc19-42db-acb2-076acd33640d"
-    },
-    {
-      "name": "Халк",
-      "description": "Крушить",
-      "element": "earth",
-      "id": "126180ce-ee5a-4945-9bb4-995c2907fa45"
+      "id": "b8c0f718-0c0e-4f2a-b8d4-2fc109676bb9"
     }
   ],
   "filters": [
