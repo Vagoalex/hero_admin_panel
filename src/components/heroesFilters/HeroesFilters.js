@@ -6,12 +6,7 @@
 // Представьте, что вы попросили бэкенд-разработчика об этом
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  filtersFetching,
-  filtersFetched,
-  filtersFetchingError,
-  changeActiveFilter,
-} from '../../actions';
+import { fetchFilters, changeActiveFilter } from '../../actions';
 import classnames from 'classnames';
 import { useHttp } from '../../hooks/http.hook';
 import Spinner from '../spinner/Spinner';
@@ -26,10 +21,7 @@ const HeroesFilters = () => {
   const { request } = useHttp();
 
   useEffect(() => {
-    dispatch(filtersFetching());
-    request('http://localhost:3001/filters')
-      .then((data) => dispatch(filtersFetched(data)))
-      .catch(() => dispatch(filtersFetchingError()));
+    dispatch(fetchFilters(request));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
