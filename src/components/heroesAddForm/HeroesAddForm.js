@@ -12,7 +12,7 @@ import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import { useHttp } from '../../hooks/http.hook';
 import { v4 as uuidv4 } from 'uuid';
-import { addHero } from '../../actions';
+import { addHero } from '../heroesList/HeroesSlice';
 
 import './HeroesAddForm.scss';
 

@@ -6,7 +6,8 @@
 // Представьте, что вы попросили бэкенд-разработчика об этом
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchFilters, changeActiveFilter } from '../../actions';
+import { fetchFilters } from '../../actions';
+import { changeActiveFilter } from './FiltersSlice';
 import classnames from 'classnames';
 import { useHttp } from '../../hooks/http.hook';
 import Spinner from '../spinner/Spinner';
