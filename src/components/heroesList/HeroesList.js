@@ -4,12 +4,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createSelector } from 'reselect';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import {
-  heroesFetching,
-  heroesFetched,
-  heroesFetchingError,
-  deleteHero,
-} from '../../actions';
+// import {
+//   fetchHeroes,
+//   heroesFetching,
+//   heroesFetched,
+//   heroesFetchingError,
+//   deleteHero,
+// } from '../../actions';
+
+import { fetchHeroes, deleteHero } from '../../actions';
 import HeroesListItem from '../heroesListItem/HeroesListItem';
 import Spinner from '../spinner/Spinner';
 import './HeroesList.scss';
@@ -25,7 +28,6 @@ const HeroesList = () => {
     (state) => state.heroes.heroes, // heroes - second agr
     (filter, heroes) => {
       if (filter === 'all') {
-        console.log('render');
         return heroes;
       } else {
         return heroes.filter((hero) => hero.element === filter);
@@ -45,15 +47,19 @@ const HeroesList = () => {
   //     );
   //   }
   // });
-  const heroesLoadingStatus = useSelector((state) => state.heroesLoadingStatus);
+  const heroesLoadingStatus = useSelector(
+    (state) => state.heroes.heroesLoadingStatus
+  );
   const dispatch = useDispatch();
   const { request } = useHttp();
 
   useEffect(() => {
-    dispatch(heroesFetching());
-    request('http://localhost:3001/heroes')
-      .then((data) => dispatch(heroesFetched(data)))
-      .catch(() => dispatch(heroesFetchingError()));
+    // dispatch(heroesFetching());
+    // request('http://localhost:3001/heroes')
+    //   .then((data) => dispatch(heroesFetched(data)))
+    //   .catch(() => dispatch(heroesFetchingError()));
+
+    dispatch(fetchHeroes(request));
 
     // eslint-disable-next-line
   }, []);
@@ -86,7 +92,7 @@ const HeroesList = () => {
 
     return arr.map(({ id, ...props }) => {
       return (
-        <CSSTransition key={id} timeout={500} classNames='hero'>
+        <CSSTransition key={id} timeout={1000} classNames='hero'>
           <HeroesListItem {...props} onDelete={() => onDelete(id)} />
         </CSSTransition>
       );

@@ -1,9 +1,9 @@
 .hero-enter-active {
-  animation: fade-in 500ms forwards;
+  animation: fade-in 1000ms forwards;
 }
 
 .hero-exit-active {
-  animation: fade-out 500ms forwards;
+  animation: fade-out 1000ms forwards;
 }
 
 @keyframes fade-in {

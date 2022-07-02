@@ -17,6 +17,18 @@
       "description": "Взрывать",
       "element": "fire",
       "id": "b8c0f718-0c0e-4f2a-b8d4-2fc109676bb9"
+    },
+    {
+      "name": "Маруся",
+      "description": "Ходит в душ",
+      "element": "water",
+      "id": "00a1ee4e-670b-4f59-a09a-b9a3941be3bc"
+    },
+    {
+      "name": "Сашка",
+      "description": "Ныть на весь мир",
+      "element": "earth",
+      "id": "4e35bf9f-8f0f-441a-aa34-c50f0cfde7de"
     }
   ],
   "filters": [
