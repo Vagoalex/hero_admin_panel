@@ -13,10 +13,16 @@
       "element": "wind"
     },
     {
+      "name": "Alex",
+      "description": "Бить подушкой\n",
+      "element": "water",
+      "id": "e9f2b632-cf43-4275-9de1-5ca310c68fe9"
+    },
+    {
       "name": "Халк",
-      "description": "Крушить ломать",
+      "description": "Халк крушить, Халк ломать!",
       "element": "earth",
-      "id": "d71b4089-4941-4d66-90a1-b4511321aa5e"
+      "id": "72f0937e-fc69-4f32-87a8-d9d67bef6e49"
     }
   ],
   "filters": [
